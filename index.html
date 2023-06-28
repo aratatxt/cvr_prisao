@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contador de Estrelas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 300px;
+            margin: auto;
+            padding: 20px;
+            background-color: #f2f2f2;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .label {
+            margin-top: 20px;
+        }
+        .input-group {
+            display: flex;
+            justify-content: space-between;
+        }
+        .input-group input {
+            width: 50%;
+        }
+        .button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="input-group">
+        <label for="stars">Número de estrelas:</label>
+        <input type="number" id="stars">
+    </div>
+    <button class="button" onclick="calculate()">Calcular</button>
+    <p class="label" id="prisonTime">Tempo Prisão:</p>
+    <p class="label" id="lawyerFee">Gastos com advogado:</p>
+    <p class="label" id="cityHallFee">Gastos com Prefeitura:</p>
+    <footer>
+        <p style="color:green;"> FEITO POR: XxdragonxX / Arata.txt</p>
+    </footer>
+    <script>
+        function calculate() {
+            var stars = document.getElementById('stars').value;
+            document.getElementById('prisonTime').innerHTML = "Tempo Prisão: " + stars * 3 + " minutos";
+            document.getElementById('lawyerFee').innerHTML = "Gastos com advogado: " + stars * 250 + " $";
+            document.getElementById('cityHallFee').innerHTML = "Gastos com Prefeitura: " + stars * 500 + " $";
+        }
+    </script>
+</body>
+</html>
